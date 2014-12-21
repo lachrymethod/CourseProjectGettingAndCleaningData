@@ -56,8 +56,7 @@
         data.wlabels <- cbind(labels.all, data.extract)
                 ## Remove the Activity Code in the first column
                 data.wlabels <- data.wlabels[,2:81]
-        
-## PART 1        
+             
         ## ADD the subjects that performed the activites to the data set
         names(subj.all) <- "Subject"
         data.clean <-cbind(subj.all, data.wlabels)
@@ -71,4 +70,4 @@
                         summarise_each(funs(mean))
 
         ## WRITE the tidy data to a .txt file
-        write.table(data.tidy, file = "./tidydata.txt", row.name = FALSE)
+        write.table(data.tidy, file = "./tidydata.txt", row.name = FALSE)d
